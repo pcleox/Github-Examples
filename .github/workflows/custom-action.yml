@@ -1,4 +1,4 @@
-on: [push]
+on: [push,issues]
 
 jobs:
   my-job:
@@ -12,4 +12,5 @@ jobs:
           name: 'Brown'
       # Use the output from the `hello` step
       - name: Get the Output
+
         run: echo "The time was ${{ steps.hello.outputs.greeting }}"
