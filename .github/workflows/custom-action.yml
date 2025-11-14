@@ -11,7 +11,8 @@ jobs:
     steps:
       - name: Hello world action step
         
-        run : echo "${GITHUB_REPOSITORY}"
+        run : echo "${{ inputs.image_tag }}"
+              echo "${ GITHUB_BASE_REF }"
 
       - name: print out bass ref
         
@@ -28,6 +29,6 @@ jobs:
             echo "This check ran ${GITHUB_REF##*/}"
           else
             echo "else block ran" 
-          fi
+          fi 
         
 
