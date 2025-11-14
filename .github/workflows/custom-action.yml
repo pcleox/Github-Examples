@@ -19,10 +19,15 @@ jobs:
 
       - name: print out bass ref
         
-        run: echo "{$GITHUB_REF}"
+        run: echo "${GITHUB_REF}"
 
       - name: print out bass branch
         
-        run: echo "{$GITHUB_REF##*/}"
+        run: |
+          if [[ "${GITHUB_REF##*/}" == "main"]]; then
+            echo "This check ran ${GITHUB_REF##*/}"
+          else
+            echo "else block ran" 
+          fi
         
 
