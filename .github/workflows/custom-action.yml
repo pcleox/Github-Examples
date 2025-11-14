@@ -12,7 +12,7 @@ jobs:
       - name: Hello world action step
         
         run : echo "${{ inputs.image_tag }}"
-              echo "${ GITHUB_BASE_REF }"
+              echo "${GITHUB_BASE_REF}"
 
       - name: print out bass ref
         
