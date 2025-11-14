@@ -1,5 +1,9 @@
-on: [push,issues]
-
+on:
+    workflow_call:
+      inputs:
+        image_tag:
+          required: true
+          type: string
 jobs:
   my-job:
     runs-on: ubuntu-latest
