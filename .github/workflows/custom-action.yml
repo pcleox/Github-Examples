@@ -15,6 +15,6 @@ jobs:
 
       - name: print out the token
         
-        run: echo "$GITHUB_TOKEN"
+        run: echo "$GITHUB_BASE_REF	"
         
 
