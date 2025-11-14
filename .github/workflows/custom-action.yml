@@ -24,7 +24,7 @@ jobs:
       - name: print out bass branch
         
         run: |
-          if [[ "${GITHUB_REF##*/}" == "main"]]; then
+          if [[ "${GITHUB_REF##*/}" == "main" ]]; then
             echo "This check ran ${GITHUB_REF##*/}"
           else
             echo "else block ran" 
