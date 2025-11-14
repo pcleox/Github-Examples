@@ -11,10 +11,18 @@ jobs:
     steps:
       - name: Hello world action step
         
-        run : echo "$GITHUB_REPOSITORY"
+        run : echo "${GITHUB_REPOSITORY}"
 
-      - name: print out the token
+      - name: print out bass ref
         
-        run: echo "$GITHUB_BASE_REF	"
+        run: echo "${GITHUB_BASE_REF}"
+
+      - name: print out bass ref
+        
+        run: echo "{$GITHUB_REF}"
+
+      - name: print out bass branch
+        
+        run: echo "{$GITHUB_REF##*/}"
         
 
