@@ -1,0 +1,10 @@
+name: Testing the CICD
+
+on: [push]
+
+jobs:
+    run-custom-action:
+        uses: ./github/workflow/custom-action.yml
+        with:
+            image_tag: dev
+        secrets: inherit    
